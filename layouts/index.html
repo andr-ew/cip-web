@@ -1,6 +1,19 @@
 {{ define "body" }}
-    <h1>Nice. It's looking good already.</h1>
-    <ul class="blogList">
-        <li>testing 1234</li>
-    </ul>
+    {{ partial "stylesheet" (dict "href" "style/home.scss") }}
+    {{ $built := resources.Get "js/home/wrms.js" | js.Build }}
+    <script src="{{ $built.RelPermalink }}" defer></script>
+    <header class="fixedHeader">
+        <h1 aria-label="caught in pointers">
+            <div aria-hidden="true">
+                <img class="top left" src="/images/header_top_left.svg" />
+                <img class="top right" src="/images/header_top_right.svg" />
+                <img class="bottom left" src="/images/header_bottom_left.svg" />
+                <img
+                    class="bottom right"
+                    src="/images/header_bottom_right.svg"
+                />
+            </div>
+        </h1>
+    </header>
+    <main class="mainScroll"></main>
 {{ end }}

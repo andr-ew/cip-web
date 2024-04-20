@@ -18,6 +18,10 @@
     "homepage": "https://github.com/andr-ew/cip-web#readme",
     "devDependencies": {
         "prettier": "3.2.5",
-        "prettier-plugin-go-template": "^0.0.15"
+        "prettier-plugin-go-template": "^0.0.15",
+        "scss-reset": "^1.4.2"
+    },
+    "dependencies": {
+        "three": "^0.163.0"
     }
 }

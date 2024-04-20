@@ -5,14 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Document</title>
-        {{ with resources.Get "style/home.scss" | toCSS | minify | fingerprint }}
-            <link
-                rel="stylesheet"
-                href="{{ .RelPermalink }}"
-                integrity="{{ .Data.Integrity }}"
-                crossorigin="anonymous"
-            />
-        {{ end }}
+        {{ partial "stylesheet" (dict "href" "style/global.scss") }}
     </head>
     <body>
         {{ block "body" . }}
