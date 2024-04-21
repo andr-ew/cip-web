@@ -5,6 +5,8 @@ import { Wrm, makecrv } from 'js/lib/wrms.js';
 
 document.querySelector('main').appendChild(renderer.domElement);
 
+renderer.domElement.setAttribute('class', 'heroWrm');
+
 loop(130, (scene, camera) => {
     camera.far = 900;
     camera.updateProjectionMatrix();

@@ -21237,6 +21237,7 @@ void main() {
 
   // <stdin>
   document.querySelector("main").appendChild(renderer.domElement);
+  renderer.domElement.setAttribute("class", "heroWrm");
   loop(130, (scene2, camera2) => {
     camera2.far = 900;
     camera2.updateProjectionMatrix();
