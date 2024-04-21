@@ -52,7 +52,10 @@ export var formatters = {};
 formatters['teapot3'] = mesh => {
     mesh.position.y = -50 * 0.25;
     mesh.scale.set(0.25, 0.25, 0.25);
-    mesh.rotateX(-Math.PI / 2);
+    // mesh.rotateX(-Math.PI / 2);
+    // mesh.rotateY(-Math.PI / 2);
+    // mesh.rotateZ(Math.PI / 2);
+    mesh.rotateX(Math.PI / 8);
 
     return mesh;
 };

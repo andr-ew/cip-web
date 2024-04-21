@@ -5,56 +5,63 @@ import { Wrm, makecrv } from 'js/lib/wrms.js';
 
 document.querySelector('main').appendChild(renderer.domElement);
 
-loop(90, (scene, camera) => {
+loop(130, (scene, camera) => {
     camera.far = 900;
     camera.updateProjectionMatrix();
 
     var wrm = new Wrm(
-        //'flower',
-        //    'fel-pro',
+        'flower',
         //'lychee',
-        'boquet',
+        // 'boquet',
         makecrv(function (t, optionalTarget) {
             var point = optionalTarget || new THREE.Vector3();
 
-            t = 2 * Math.PI * t;
+            t *= Math.PI * 2;
 
-            var x =
-                -0.22 * Math.cos(t) -
-                1.28 * Math.sin(t) -
-                0.44 * Math.cos(3 * t) -
-                0.78 * Math.sin(3 * t);
-            var y =
-                -0.1 * Math.cos(2 * t) -
-                0.27 * Math.sin(2 * t) +
-                0.38 * Math.cos(4 * t) +
-                0.46 * Math.sin(4 * t);
-            var z = 0.7 * Math.cos(3 * t) - 0.4 * Math.sin(3 * t);
+            const x = (2 + Math.cos(3 * t)) * Math.cos(2 * t);
+            const y = (2 + Math.cos(3 * t)) * Math.sin(2 * t);
+            const z = Math.sin(3 * t) * 2;
 
-            return point.set(x, y, z).multiplyScalar(200);
+            return point.set(x, y, z).multiplyScalar(100);
         }),
-        130,
+        110,
+
+        // 'teapot3',
+        // makecrv(function (t, optionalTarget) {
+        //     var point = optionalTarget || new THREE.Vector3();
+
+        //     t *= Math.PI * 2;
+
+        //     const x = (2 + Math.cos(3 * t)) * Math.cos(2 * t);
+        //     const y = (2 + Math.cos(3 * t)) * Math.sin(2 * t);
+        //     const z = Math.sin(3 * t) * 2;
+
+        //     return point.set(x, y, z).multiplyScalar(43);
+        // }),
+        // 123,
     );
     scene.add(wrm.group);
 
-    return tt => {
-        const t = tt * 2;
+    const dice1 = Math.random();
+    const dice2 = Math.random();
 
-        wrm.group.rotation.y = Math.PI * 2 * t;
-        wrm.group.rotation.x = Math.PI * 2 * t;
+    return t => {
+        wrm.group.rotation.y = Math.PI * 2 * (t + dice1);
+        wrm.group.rotation.x = Math.PI * 2 * (t + dice2);
 
         camera.position.setFromSpherical(
             new THREE.Spherical(
-                600,
+                550,
+                //250
                 //Math.PI * 2 * t,
                 //t,
                 //Math.PI / 2,
-                Math.PI / 2 + Math.sin(Math.PI * 2 * tt),
+                Math.PI / 2 + Math.sin(Math.PI * 2 * t),
                 Math.PI * 2 * t,
             ),
         );
         camera.lookAt(0, 0, 0);
 
-        wrm.update(t * 2);
+        wrm.update(t * 5);
     };
 });
