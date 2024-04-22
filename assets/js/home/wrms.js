@@ -48,13 +48,13 @@ loop(130, (scene, camera) => {
     const dice1 = Math.random();
     const dice2 = Math.random();
 
-    return t => {
+    return (t, isMobile) => {
         wrm.group.rotation.y = Math.PI * 2 * (t + dice1);
         wrm.group.rotation.x = Math.PI * 2 * (t + dice2);
 
         camera.position.setFromSpherical(
             new THREE.Spherical(
-                550,
+                isMobile ? 650 : 550,
                 //250
                 //Math.PI * 2 * t,
                 //t,

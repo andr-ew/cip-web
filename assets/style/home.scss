@@ -1,40 +1,70 @@
+@import 'assets/style/_variables';
+
 .fixedHeader {
-    // position: fixed;
-    // width: 100vw;
-    // height: 100vh;
-
-    // padding: 13px 16px;
-
     h1 {
-        // position: relative;
-        // width: 100%;
-        // height: 100%;
-
         div {
-            // position: relative;
-            // width: 100%;
-            // height: 100%;
-
             img {
                 position: fixed;
+                z-index: 3;
+
+                @include mobile {
+                    transform: scale(calc(26 / 31));
+                }
             }
 
             .top {
-                top: 13px;
+                top: $home-margin-y-desktop;
             }
 
             .bottom {
-                bottom: 13px;
+                bottom: $home-margin-y-desktop;
             }
 
             .left {
-                left: 16px;
+                left: $home-margin-x-desktop;
             }
 
             .right {
-                right: 16px;
+                right: $home-margin-x-desktop;
+            }
+
+            @include mobile {
+                .top {
+                    top: $home-margin-y-mobile;
+                }
+
+                .bottom {
+                    bottom: $home-margin-y-mobile;
+                }
+
+                .left {
+                    left: $home-margin-x-mobile;
+                }
+
+                .right {
+                    right: $home-margin-x-mobile;
+                }
+
+                .top.left {
+                    transform-origin: top left;
+                }
+                .bottom.left {
+                    transform-origin: bottom left;
+                }
+                .bottom.right {
+                    transform-origin: bottom right;
+                }
+                .top.right {
+                    transform-origin: top right;
+                }
             }
         }
+    }
+}
+
+.heroWrm {
+    @include mobile {
+        // transform: scale(0.8);
     }
 }
 
@@ -62,11 +92,22 @@
         left: 50%;
 
         bottom: calc(100% - 100vh + 13px);
+
+        @include mobile {
+            transform: scale(calc(12 / 14));
+            transform-origin: bottom center;
+        }
     }
 
     .artContainer {
-        margin-top: 200px;
+        @include desktop {
+            margin-top: 200px;
+            padding: 0 75px;
+        }
 
-        padding: 0 75px;
+        @include mobile {
+            margin-top: 75px;
+            padding: 0 $home-margin-x-mobile + 2px;
+        }
     }
 }

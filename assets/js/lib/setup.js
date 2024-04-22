@@ -11,7 +11,7 @@ export const camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
     1,
-    3400,
+    2000,
     //400
 );
 
@@ -21,6 +21,8 @@ export const renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
+
+var isMobile = false;
 
 function resize() {
     let w, h;
@@ -33,7 +35,10 @@ function resize() {
     }
 
     camera.aspect = w / h;
+    camera.far = 2000;
     camera.updateProjectionMatrix();
+
+    isMobile = w < h;
 
     renderer.setSize(w, h);
 }
@@ -62,10 +67,11 @@ function loop(duration = 3, init = () => {}, options = {}) {
         //t = loop position in the range 0 - 1
         const t = (elapsed % (duration * 1000)) / (duration * 1000);
 
-        update(t, elapsed, firstFrame);
+        update(t, isMobile);
 
         renderer.render(scene, camera);
     };
+    resize();
     animate();
 
     if (options.done) options.done();

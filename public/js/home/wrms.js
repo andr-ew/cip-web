@@ -20538,7 +20538,7 @@ void main() {
     75,
     window.innerWidth / window.innerHeight,
     1,
-    3400
+    2e3
     //400
   );
   var renderer = new WebGLRenderer({
@@ -20547,6 +20547,7 @@ void main() {
   });
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
+  var isMobile = false;
   function resize() {
     let w, h;
     if (recording) {
@@ -20557,7 +20558,9 @@ void main() {
       h = window.innerHeight;
     }
     camera.aspect = w / h;
+    camera.far = 2e3;
     camera.updateProjectionMatrix();
+    isMobile = w < h;
     renderer.setSize(w, h);
   }
   window.addEventListener("resize", resize);
@@ -20579,9 +20582,10 @@ void main() {
       }
       const elapsed = now - start;
       const t = elapsed % (duration * 1e3) / (duration * 1e3);
-      update(t, elapsed, firstFrame);
+      update(t, isMobile);
       renderer.render(scene, camera);
     };
+    resize();
     animate();
     if (options.done)
       options.done();
@@ -21269,12 +21273,12 @@ void main() {
     scene2.add(wrm.group);
     const dice1 = Math.random();
     const dice2 = Math.random();
-    return (t) => {
+    return (t, isMobile2) => {
       wrm.group.rotation.y = Math.PI * 2 * (t + dice1);
       wrm.group.rotation.x = Math.PI * 2 * (t + dice2);
       camera2.position.setFromSpherical(
         new Spherical(
-          550,
+          isMobile2 ? 650 : 550,
           //250
           //Math.PI * 2 * t,
           //t,
