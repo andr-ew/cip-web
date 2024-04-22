@@ -21236,7 +21236,8 @@ void main() {
   };
 
   // <stdin>
-  document.querySelector("main").appendChild(renderer.domElement);
+  var main = document.querySelector("main");
+  main.insertBefore(renderer.domElement, main.firstElementChild);
   renderer.domElement.setAttribute("class", "heroWrm");
   loop(130, (scene2, camera2) => {
     camera2.far = 900;

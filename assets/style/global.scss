@@ -2,4 +2,47 @@
 
 body {
     margin: 0;
+
+    background-color: #e7e7e7;
+}
+
+@font-face {
+    font-family: 'PP Mondwest';
+    src: url('/fonts/PPMondwest-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('/fonts/SpaceMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('/fonts/LibreBaskerville-Italic.ttf') format('truetype');
+    font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'PPMondwest', serif;
+    font-weight: 400;
+    font-size: 60px;
+    font-style: normal;
+}
+
+p {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+
+    em,
+    strong {
+        font-family: 'Libre Baskerville', serif;
+        font-style: italic;
+    }
 }

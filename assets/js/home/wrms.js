@@ -3,7 +3,8 @@ import * as THREE from 'three';
 import { loop, renderer } from 'js/lib/setup.js';
 import { Wrm, makecrv } from 'js/lib/wrms.js';
 
-document.querySelector('main').appendChild(renderer.domElement);
+const main = document.querySelector('main');
+main.insertBefore(renderer.domElement, main.firstElementChild);
 
 renderer.domElement.setAttribute('class', 'heroWrm');
 
