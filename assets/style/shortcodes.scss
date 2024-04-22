@@ -9,7 +9,7 @@
 
         align-items: center;
 
-        img {
+        .img-wrapper {
             grid-column: 2 / 3;
             grid-row: 1 / 2;
         }
@@ -20,7 +20,7 @@
         }
     }
     @include mobile {
-        img {
+        .img-wrapper {
             margin-bottom: 16px;
         }
 

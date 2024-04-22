@@ -1,0 +1,17 @@
+$home-margin-y-desktop: 13px;
+$home-margin-x-desktop: 16px;
+
+$home-margin-y-mobile: 12px;
+$home-margin-x-mobile: 7px;
+
+@mixin mobile {
+    @media (max-width: 1050px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1050px) {
+        @content;
+    }
+}
