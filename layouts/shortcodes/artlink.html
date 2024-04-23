@@ -1,0 +1,15 @@
+{{ $src := .Get "imgSrc" }}
+{{ $img := .Page.Resources.GetMatch $src }}
+{{ if $img }}
+    <a
+        class="artLink"
+        href="{{ $src }}"
+        data-pswp-width="{{ $img.Width }}"
+        data-pswp-height="{{ $img.Height }}"
+        target="_blank"
+    >
+        {{ .Inner | markdownify }}
+    </a>
+{{ else }}
+    <p>image not found: {{ $src }}</p>
+{{ end }}

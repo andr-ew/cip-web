@@ -9,8 +9,31 @@ image:
 ---
 
 {{< artfigure >}}
+{{< artlink imgSrc=time_path_print_4.jpg >}}
 ![WRITE ALT TEXT](time_path_print_4.jpg)
+{{< /artlink >}}
+{{< artcaption >}}
+_time path print 4_, 19 x 24”
 
+inkjet, silkscreen, acrylic paint on cover weight paper, birch plywood & acrylic custom frame.
+{{< /artcaption >}}
+{{< /artfigure >}}
+
+{{< artfigure >}}
+{{< artlink imgSrc=time_path_print_7.jpg >}}
+![WRITE ALT TEXT](time_path_print_7.jpg)
+{{< /artlink >}}
+{{< artcaption >}}
+_time path print 4_, 19 x 24”
+
+inkjet, silkscreen, acrylic paint on cover weight paper, birch plywood & acrylic custom frame.
+{{< /artcaption >}}
+{{< /artfigure >}}
+
+{{< artfigure >}}
+{{< artlink imgSrc=time_path_print_1.jpg >}}
+![WRITE ALT TEXT](time_path_print_1.jpg)
+{{< /artlink >}}
 {{< artcaption >}}
 _time path print 4_, 19 x 24”
 

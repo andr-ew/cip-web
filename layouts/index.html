@@ -1,7 +1,11 @@
 {{ define "body" }}
     {{ partial "stylesheet" (dict "href" "style/home.scss") }}
-    {{ $built := resources.Get "js/home/wrms.js" | js.Build }}
-    <script src="{{ $built.RelPermalink }}" defer></script>
+    {{ partial "script" (dict "src" "js/home/main.js") }}
+    {{ partial "script" (dict "src" "js/home/wrms.js") }}
+    <link
+        rel="stylesheet"
+        href="/node_modules/photoswipe/dist/photoswipe.css"
+    />
     <header class="fixedHeader">
         <h1 aria-label="caught in pointers">
             <div aria-hidden="true">
@@ -19,7 +23,7 @@
         <p class="scrollArrow">
             <img src="/images/scroll.svg" alt="scroll to view more content" />
         </p>
-        <section class="artContainer">
+        <section class="artContainer" id="ps-gallery--home">
             {{ .Content }}
         </section>
     </main>
