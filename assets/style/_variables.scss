@@ -4,6 +4,10 @@ $home-margin-x-desktop: 16px;
 $home-margin-y-mobile: 12px;
 $home-margin-x-mobile: 7px;
 
+$color-blue: #5868f5;
+$color-green: #37a777;
+$color-creme: #ebebeb;
+
 @mixin mobile {
     @media (max-width: 1050px) {
         @content;

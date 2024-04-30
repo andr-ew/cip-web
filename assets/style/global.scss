@@ -28,22 +28,40 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'PPMondwest', serif;
+    font-family: 'PP Mondwest', serif;
     font-weight: 400;
     font-size: 60px;
     font-style: normal;
+
+    margin-bottom: 50px;
 }
 
 p {
     font-family: 'Space Mono', monospace;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 15px;
     font-style: normal;
     line-height: 110%;
 
+    margin-bottom: 20px;
+
+    text-underline-offset: 2px;
+
     em,
-    strong {
+    strong,
+    a {
         font-family: 'Libre Baskerville', serif;
         font-style: italic;
     }
+}
+
+figure {
+    * {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+}
+
+a:any-link {
+    color: inherit;
 }

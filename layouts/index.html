@@ -6,8 +6,8 @@
         rel="stylesheet"
         href="/node_modules/photoswipe/dist/photoswipe.css"
     />
-    <header class="fixedHeader">
-        <h1 aria-label="caught in pointers">
+    <header>
+        <h1 class="fixedHeader" aria-label="caught in pointers">
             <div aria-hidden="true">
                 <img class="top left" src="/images/header_top_left.svg" />
                 <img class="top right" src="/images/header_top_right.svg" />
@@ -18,6 +18,20 @@
                 />
             </div>
         </h1>
+        {{ partial "detailmodal" (
+            dict "ctx" .
+            "side" "left"
+            "pagePath" "/pages/info"
+            "buttonPath" "/images/info-button.svg"
+            )
+        }}
+        {{ partial "detailmodal" (
+            dict "ctx" .
+            "side" "right"
+            "pagePath" "/pages/info"
+            "buttonPath" "/images/prices-button.svg"
+            )
+        }}
     </header>
     <main class="mainScroll">
         <p class="scrollArrow">

@@ -5705,6 +5705,17 @@
     pswpModule: () => Promise.resolve().then(() => (init_photoswipe_esm(), photoswipe_esm_exports))
   });
   lightbox.init();
+  var closeAllModals = () => {
+    document.querySelectorAll(".detailModal").forEach((e) => {
+      e.removeAttribute("open");
+    });
+  };
+  document.querySelector("main").addEventListener("click", closeAllModals);
+  console.log("\u{1FAD6}\u{1FAD6}\u{1FAD6}\u{1FAD6}\u{1FAD6}\u{1FAD6}\u{1FAD6}\u{1FAD6}\u{1FAD6}\u{1FAD6}\u{1FAD6}");
+  document.querySelectorAll(".closeButton").forEach((e) => {
+    console.log({ e });
+    e.addEventListener("click", closeAllModals);
+  });
 })();
 /*! Bundled license information:
 
