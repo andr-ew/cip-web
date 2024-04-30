@@ -17,7 +17,6 @@ document.querySelector('main').addEventListener('click', closeAllModals);
 
 console.log('🫖🫖🫖🫖🫖🫖🫖🫖🫖🫖🫖');
 
-document.querySelectorAll('.closeButton').forEach(e => {
-    console.log({ e });
-    e.addEventListener('click', closeAllModals);
-});
+document
+    .querySelectorAll('.closeButton')
+    .forEach(e => e.addEventListener('click', closeAllModals));

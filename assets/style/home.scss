@@ -111,7 +111,9 @@
 
         .contentContainer {
             left: 0;
+
             background-color: $color-blue;
+            background-image: url('/images/bg-info.svg');
         }
 
         &[open] {
@@ -128,7 +130,9 @@
 
         .contentContainer {
             right: 0;
+
             background-color: $color-green;
+            background-image: url('/images/bg-prices.png');
         }
 
         &[open] {

@@ -65,3 +65,29 @@ figure {
 a:any-link {
     color: inherit;
 }
+
+table {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: normal;
+    line-height: 110%;
+
+    width: 100%;
+    margin-bottom: 45px;
+
+    tbody {
+        tr {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+
+            border-bottom: solid 1px white;
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-columns: max-content;
+            grid-auto-flow: column;
+            grid-gap: 30px;
+        }
+    }
+}
