@@ -73,23 +73,33 @@
         cursor: pointer;
 
         position: fixed;
-        top: 50vh;
-        transform: translateY(-50%);
+
+        @include desktop {
+            top: 50vh;
+        }
+        @include mobile {
+            top: 0;
+        }
     }
 
     .contentContainer {
         color: $color-creme;
 
         position: fixed;
-        top: 0;
-        width: 75vw;
-        height: 100vh;
-        padding: 0 100px;
+
+        @include desktop {
+            top: 0;
+            width: 75vw;
+            height: 100vh;
+            padding: 0 100px;
+        }
 
         .closeButton {
-            position: absolute;
-            top: 45px;
-            right: 45px;
+            @include desktop {
+                position: absolute;
+                top: 45px;
+                right: 45px;
+            }
         }
 
         .content {
@@ -98,46 +108,100 @@
             height: 100%;
             overflow-y: scroll;
 
-            * {
-                max-width: 720px;
+            @include desktop {
+                * {
+                    max-width: 720px;
+                }
             }
         }
     }
 
     &.left {
         summary {
-            left: -1px;
+            left: 0;
+
+            @include desktop {
+                transform-origin: top left;
+                transform: rotate(-90deg) translateX(-50%);
+            }
+            @include mobile {
+                width: 50vw;
+
+                display: grid;
+                grid-template-columns: max-content 1fr;
+
+                .summaryImagesContainer {
+                    grid-column: 1 / 2;
+                }
+
+                &::after {
+                    content: '';
+
+                    grid-column: 2 / 3;
+                    background-color: $color-blue;
+                }
+            }
         }
 
         .contentContainer {
-            left: 0;
-
             background-color: $color-blue;
             background-image: url('/images/bg-info.svg');
+
+            @include desktop {
+                left: 0;
+            }
         }
 
         &[open] {
             summary {
-                left: calc(75vw - 1px);
+                @include desktop {
+                    left: calc(75vw);
+                }
             }
         }
     }
 
     &.right {
         summary {
-            right: -1px;
+            right: 0;
+
+            @include desktop {
+                transform-origin: top right;
+                transform: rotate(90deg) translateX(50%);
+            }
+            @include mobile {
+                width: 50vw;
+
+                display: grid;
+                grid-template-columns: 1fr max-content;
+
+                .summaryImagesContainer {
+                    grid-column: 2 / 3;
+                }
+
+                &::before {
+                    content: '';
+
+                    grid-column: 1 / 2;
+                    background-color: $color-green;
+                }
+            }
         }
 
         .contentContainer {
-            right: 0;
-
             background-color: $color-green;
             background-image: url('/images/bg-prices.png');
+
+            @include desktop {
+                right: 0;
+            }
         }
 
         &[open] {
             summary {
-                right: calc(75vw - 1px);
+                @include desktop {
+                    right: calc(75vw);
+                }
             }
         }
     }

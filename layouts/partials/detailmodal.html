@@ -1,6 +1,12 @@
 <details class="detailModal {{ .side }} info">
-    <summary>
-        <img alt="hide/show info" src="{{ .buttonPath }}" />
+    <summary aria-label="hide/show info">
+        <div class="summaryImagesContainer" aria-hidden="true">
+            <img
+                class="summaryLabelButton"
+                alt="hide/show info"
+                src="{{ .buttonPath }}"
+            />
+        </div>
     </summary>
     <div class="contentContainer">
         <button class="closeButton" type="button">
