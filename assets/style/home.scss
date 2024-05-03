@@ -32,7 +32,7 @@
 
         @include mobile {
             .top {
-                top: $home-margin-y-mobile;
+                top: $home-margin-y-mobile + $summary-button-height-mobile;
             }
 
             .bottom {
@@ -79,6 +79,7 @@
         }
         @include mobile {
             top: 0;
+            height: $summary-button-height-mobile;
         }
     }
 
@@ -93,6 +94,12 @@
             height: 100vh;
             padding: 0 100px;
         }
+        @include mobile {
+            top: $summary-button-height-mobile;
+            width: 100vw;
+            height: calc(100vh - 44px);
+            padding: 0 $home-margin-x-mobile;
+        }
 
         .closeButton {
             @include desktop {
@@ -100,18 +107,25 @@
                 top: 45px;
                 right: 45px;
             }
+            @include mobile {
+                position: fixed;
+                top: 10px;
+            }
         }
 
         .content {
-            padding: 150px 0;
-
             height: 100%;
             overflow-y: scroll;
 
             @include desktop {
+                padding: 150px 0;
+
                 * {
                     max-width: 720px;
                 }
+            }
+            @include mobile {
+                padding: 75px 0;
             }
         }
     }
@@ -156,6 +170,17 @@
             summary {
                 @include desktop {
                     left: calc(75vw);
+                }
+            }
+            @include mobile {
+                .closeButton {
+                    left: 5px;
+                }
+                .summaryImagesContainer {
+                    background-color: $color-blue;
+                }
+                .summaryLabelButton {
+                    opacity: 0;
                 }
             }
         }
@@ -203,6 +228,17 @@
                     right: calc(75vw);
                 }
             }
+            @include mobile {
+                .closeButton {
+                    right: 5px;
+                }
+                .summaryImagesContainer {
+                    background-color: $color-green;
+                }
+                .summaryLabelButton {
+                    opacity: 0;
+                }
+            }
         }
     }
 }
@@ -216,7 +252,6 @@
     background-blend-mode: lighten;
 
     margin: 0;
-    min-height: 500vh;
 
     .heroWrm {
         position: relative;
@@ -226,6 +261,7 @@
 
     .scrollArrow {
         position: absolute;
+        margin: 0;
 
         transform: translateX(-50%);
         left: 50%;
