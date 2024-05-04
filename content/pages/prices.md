@@ -9,7 +9,7 @@ draft: false
 | [time-path-1](#time-path-1) | 1 of 1   | $200 |
 | [time-path-2](#time-path-1) | ed. of 2 | $200 |
 | [time-path-3](#time-path-1) | 1 of 1   | $200 |
-| [time-path-4](#time-path-1) | 1 of 1   | $200 |
+| [time-path-4](#time-path-4) | 1 of 1   | $200 |
 | [time-path-5](#time-path-1) | 1 of 1   | $200 |
 | [time-path-6](#time-path-1) | 1 of 1   | $200 |
 | [time-path-7](#time-path-1) | ed. of 2 | $200 |
