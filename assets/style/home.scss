@@ -70,6 +70,7 @@
 
     summary {
         list-style: none;
+        list-style-type: none;
         cursor: pointer;
 
         position: fixed;
@@ -80,6 +81,13 @@
         @include mobile {
             top: 0;
             height: $summary-button-height-mobile;
+        }
+
+        &::marker {
+            display: none;
+        }
+        &::-webkit-details-marker {
+            display: none;
         }
     }
 
