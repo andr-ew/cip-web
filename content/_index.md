@@ -137,3 +137,17 @@ _time path 8_, 19 x 24”
 spray paint on laser engraved acrylic panel, inkjet on cover weight paper
 {{< /artcaption >}}
 {{< /artfigure >}}
+
+{{< artfigure id=time-path-10 style=wide >}}
+{{< artlink imgSrc=time_path_10.jpg >}}
+![WRITE ALT TEXT](time_path_10.jpg)
+{{< /artlink >}}
+{{< artlink imgSrc=time_path_10-2.jpg >}}
+![WRITE ALT TEXT](time_path_10-2.jpg)
+{{< /artlink >}}
+{{< artcaption >}}
+_time path 10_, 19 x 24”
+
+spray paint on laser engraved acrylic panel, inkjet on cover weight paper
+{{< /artcaption >}}
+{{< /artfigure >}}
