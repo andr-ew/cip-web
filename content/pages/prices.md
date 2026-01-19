@@ -6,18 +6,18 @@ draft: false
 
 |                                     |          |      |
 | ----------------------------------- | -------- | ---- |
-| [time path 4](#time-path-4)         | 1 of 1   | $250 |
-| [time path 7](#time-path-7)         | ed. of 2 | $100 |
-| [time path 1](#time-path-1)         | 1 of 1   | $200 |
-| [time path wrm 2](#time-path-wrm-2) | ed. of 3 | $75  |
-| [time path 6](#time-path-6)         | 1 of 1   | $250 |
-| [time path 3](#time-path-3)         | 1 of 1   | $100 |
-| [time path wrm 1](#time-path-wrm-1) | ed. of 3 | $75  |
-| [time path 5](#time-path-5)         | 1 of 1   | $200 |
-| [time path 9](#time-path-9)         | 1 of 1   | $100 |
-| [time path 2](#time-path-2)         | 1 of 1   | $200 |
-| [time path 8](#time-path-8)         | 1 of 1   | $100 |
-| [time path 10](#time-path-10)       | 1 of 1   | $100 |
+| [time path 4](#time-path-4)         | 1 of 1   | SOLD |
+| [time path 7](#time-path-7)         | ed. of 2 | SOLD |
+| [time path 1](#time-path-1)         | 1 of 1   | SOLD |
+| [time path wrm 2](#time-path-wrm-2) | ed. of 3 | SOLD |
+| [time path 6](#time-path-6)         | 1 of 1   | SOLD |
+| [time path 3](#time-path-3)         | 1 of 1   | SOLD |
+| [time path wrm 1](#time-path-wrm-1) | ed. of 3 | SOLD |
+| [time path 5](#time-path-5)         | 1 of 1   | SOLD |
+| [time path 9](#time-path-9)         | 1 of 1   | SOLD |
+| [time path 2](#time-path-2)         | 1 of 1   | SOLD |
+| [time path 8](#time-path-8)         | 1 of 1   | SOLD |
+| [time path 10](#time-path-10)       | 1 of 1   | SOLD |
 
 buyer pays shipping – to purchase or for any questions please reach me at [andrewcshike@gmail.com](mailto:andrewcshike@gmail.com) with the name of the piece and your shipping address, I'll provide an estimate for shipping fees. thank you so much in advance. 15% of all sales will go toward grassroots aid in g@z@.
 
