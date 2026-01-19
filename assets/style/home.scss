@@ -176,7 +176,7 @@
 
         .contentContainer {
             background-color: $color-blue;
-            background-image: url('images/bg-info.svg');
+            background-image: url('../images/bg-info.svg');
 
             @include desktop {
                 left: 0;
@@ -232,7 +232,7 @@
 
         .contentContainer {
             background-color: $color-green;
-            background-image: url('images/bg-prices.png');
+            background-image: url('../images/bg-prices.png');
 
             @include desktop {
                 right: 0;
@@ -261,7 +261,7 @@
 }
 
 .mainScroll {
-    background-image: url('images/main-bg.jpg');
+    background-image: url('../images/main-bg.jpg');
     background-size: contain;
     background-repeat: repeat-y;
 
